@@ -1,0 +1,22 @@
+<div class=card-container>
+  <div class="flat-image"><%= image_tag "#{rand(0..10)}.jpg", alt: "main image of the flat" %></div>
+  <div class="card-information">
+    <div class="text-info">
+      <h1 class="flat-name"><%= flat.name %></h1>
+      <h2 class="flat-address"><%= flat.address %></h2>
+    </div>
+    <div class="number-info">
+      <div class="flat-guests">
+        <i class="fa-regular fa-user" style="color: #fab23e;"></i>
+        <p><%= flat.number_of_guests %></p>
+      </div>
+      <div class="flat-price">
+        <i class="fa-solid fa-euro-sign" style="color: #fab23e;"></i>
+        <p><%= flat.price_per_night %></p>
+      </div>
+    </div>
+  </div>
+  <div class="more-info">
+  <%= link_to "More info" %>
+  </div>
+</div>

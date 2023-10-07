@@ -1,0 +1,10 @@
+<h1>All our flats (<%= @flats.count %>)</h1>
+<div class="flats-grid">
+  <% if @flats.empty? %>
+    <p>Sorry, there are no flats available.</p>
+  <% else %>
+    <% @flats.each do |flat| %>
+      <%= render partial: "/shared/flat_big_card", locals: { flat: flat } %>
+    <% end %>
+  <% end %>
+</div>
